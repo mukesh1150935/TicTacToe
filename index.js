@@ -23,12 +23,13 @@
               
              
                if(count%2==0){
+
                    e.currentTarget.textContent="X"
-                    winner="X"
-               }
-               else{
-               e.currentTarget.textContent="O"
-               winner="O"
+                   winner="X"
+                }
+                else{
+                    e.currentTarget.textContent="O"
+                    winner="O"
             }
         
             
@@ -55,45 +56,43 @@
                let btn8text=btn8.textContent;
                let btn9=document.getElementById("btn9")
                let btn9text=btn9.textContent;
+               function win(){
+                setTimeout(()=>{
+                    alert("Winner is "+winner+" ,Now press the reset button and start a new game")
+                   end=true;
+                },200);
+               }
 
                if(btn1text==btn2text&&btn1text==btn3text&&btn1text!=""){
-                   alert("Winner is "+winner+" ,Now press the reset button and start a new game")
-                   end=true;
+                  win();
                    return;
                }
                if(btn4text==btn5text&&btn4text==btn6text&&btn4text!=""){
-                   alert("Winner is "+winner+" ,Now press the reset button and start a new game")
-                   end=true;
+                win();
                    return;
                }
                if(btn7text==btn8text&&btn7text==btn9text&&btn7text!=""){
-                   alert("Winner is "+winner+" ,Now press the reset button and start a new game")
-                   end=true;
+                win();
                    return;
                }
                if(btn1text==btn5text&&btn1text==btn9text&&btn1text!=""){
-                   alert("Winner is "+winner+" ,Now press the reset button and start a new game")
-                   end=true;
+                win();
                    return;
                }
                if(btn3text==btn5text&&btn3text==btn7text&&btn3text!=""){
-                   alert("Winner is "+winner+" ,Now press the reset button and start a new game")
-                   end=true;
+                win();
                    return;
                }
                if(btn1text==btn4text&&btn1text==btn7text&&btn1text!=""){
-                   alert("Winner is "+winner+" ,Now press the reset button and start a new game")
-                   end=true;
+                win();
                    return;
                }
                if(btn2text==btn5text&&btn2text==btn8text&&btn2text!=""){
-                   alert("Winner is "+winner+" ,Now press the reset button and start a new game")
-                   end=true;
+                win();
                    return;
                }
                if(btn3text==btn6text&&btn3text==btn9text&&btn3text!=""){
-                   alert("Winner is "+winner+" ,Now press the reset button and start a new game")
-                   end=true;
+                win();
                    return;
                }}
 

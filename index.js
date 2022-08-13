@@ -138,7 +138,9 @@
                    
                }
                if(selected==true){
-                   alert("Game Draw,press reset and play again");
+               
+                    setTimeout(()=>{
+                   alert("Game Draw,press reset and play again");},200)
                    return;
                }
 

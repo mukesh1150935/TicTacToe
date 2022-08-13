@@ -98,9 +98,9 @@
                }
                if(btn3text==btn5text&&btn3text==btn7text&&btn3text!=""){
                 win();
-                btn1.style.backgroundColor="blue";
-                btn2.style.backgroundColor="blue";
                 btn3.style.backgroundColor="blue";
+                btn5.style.backgroundColor="blue";
+                btn7.style.backgroundColor="blue";
                    return;
                }
                if(btn1text==btn4text&&btn1text==btn7text&&btn1text!=""){

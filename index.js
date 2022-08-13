@@ -24,12 +24,12 @@
              
                if(count%2==0){
 
-                   e.currentTarget.textContent="X"
-                   winner="X"
+                   e.currentTarget.textContent="X";
+                   winner="X";
                 }
                 else{
-                    e.currentTarget.textContent="O"
-                    winner="O"
+                    e.currentTarget.textContent="O";
+                    winner="O";
             }
         
             
@@ -38,7 +38,9 @@
 
 
                //main function of winning
-               let btn1=document.getElementById("btn1")
+
+               //storing the text contexts of all buttons in their respective variablle
+               let btn1=document.getElementById("btn1");
                let btn1text=btn1.textContent;
                let btn2=document.getElementById("btn2")
                let btn2text=btn2.textContent;
@@ -56,6 +58,8 @@
                let btn8text=btn8.textContent;
                let btn9=document.getElementById("btn9")
                let btn9text=btn9.textContent;
+
+
                function win(){
                 setTimeout(()=>{
                     alert("Winner is "+winner+" ,Now press the reset button and start a new game")
@@ -65,39 +69,65 @@
 
                if(btn1text==btn2text&&btn1text==btn3text&&btn1text!=""){
                   win();
+                  btn1.style.backgroundColor="blue";
+                  btn2.style.backgroundColor="blue";
+                  btn3.style.backgroundColor="blue";
+                  
                    return;
                }
                if(btn4text==btn5text&&btn4text==btn6text&&btn4text!=""){
                 win();
+                btn4.style.backgroundColor="blue";
+                btn5.style.backgroundColor="blue";
+                btn6.style.backgroundColor="blue";
                    return;
                }
                if(btn7text==btn8text&&btn7text==btn9text&&btn7text!=""){
                 win();
+                btn7.style.backgroundColor="blue";
+                btn8.style.backgroundColor="blue";
+                btn9.style.backgroundColor="blue";
                    return;
                }
                if(btn1text==btn5text&&btn1text==btn9text&&btn1text!=""){
                 win();
+                btn1.style.backgroundColor="blue";
+                btn5.style.backgroundColor="blue";
+                btn9.style.backgroundColor="blue";
                    return;
                }
                if(btn3text==btn5text&&btn3text==btn7text&&btn3text!=""){
                 win();
+                btn1.style.backgroundColor="blue";
+                btn2.style.backgroundColor="blue";
+                btn3.style.backgroundColor="blue";
                    return;
                }
                if(btn1text==btn4text&&btn1text==btn7text&&btn1text!=""){
                 win();
+                btn1.style.backgroundColor="blue";
+                btn4.style.backgroundColor="blue";
+                btn7.style.backgroundColor="blue";
                    return;
                }
                if(btn2text==btn5text&&btn2text==btn8text&&btn2text!=""){
                 win();
+                btn2.style.backgroundColor="blue";
+                btn5.style.backgroundColor="blue";
+                btn8.style.backgroundColor="blue";
                    return;
                }
                if(btn3text==btn6text&&btn3text==btn9text&&btn3text!=""){
                 win();
+                btn3.style.backgroundColor="blue";
+                btn6.style.backgroundColor="blue";
+                btn9.style.backgroundColor="blue";
                    return;
                }}
+               
 
               //condition for draw
-              let selected=false;
+              let selected=false;        //selected means all selected
                for(let i=0;i<9;i++){
                    if(btns[i].textContent.includes("O")||btns[i].textContent.includes("X"))
                    selected=true;
@@ -124,6 +154,7 @@
               // console.log("reset function")
                for(let j=0;j<9;j++){
                    btns[j].textContent="";
+                   btns[j].style.backgroundColor="white";
                    end=false;
                }
            }
